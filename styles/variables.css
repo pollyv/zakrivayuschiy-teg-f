@@ -1,0 +1,21 @@
+:root {
+  --main-font: "Inter-Variable";
+  --accent-font: "PressStart2P";
+  --title-font-weight: 700;
+  --text-font-weight: 400;
+  --main-color: #000;
+  --background-color: #fff;
+  --accent-color-label: #fff;
+  --accent-color-button: #fff;
+  --contour-color-heart: #000;
+  --fill-color-heart: #f00;
+  --start-color-heart: #fff;
+  --floppy-color: #fff;
+  --background-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      #d3d3d300 2px 4px
+    ),
+    repeating-linear-gradient(#d3d3d3 0 2px, #d3d3d300 2px 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+}
