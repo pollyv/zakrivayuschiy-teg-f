@@ -1,17 +1,14 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
 <style>
-    @media (prefers-color-scheme: dark) {
-      :root {
-        fill: #00cc14; 
+      path {
+        fill: #000;
       }
-    }
-
-    @media (prefers-color-scheme: light) {
-      :root {
-        fill: #000;  
+     @media (prefers-color-scheme: dark) {
+      path {
+        fill: #00cc14;
       }
-    }
-</style>
+     }
+  </style>
 <path d="M128 128H160V160H128V128Z" fill="black"/>
 <path d="M96 128V96H128V128H96Z" fill="black"/>
 <path d="M96 128V160H64V128H96Z" fill="black"/>
