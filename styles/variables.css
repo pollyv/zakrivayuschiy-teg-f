@@ -1,6 +1,6 @@
 :root {
-  --main-font: "Inter-Variable";
-  --accent-font: "PressStart2P";
+  --main-font: "Inter-Variable", sans-serif;
+  --accent-font: "PressStart2P", fantasy;
   --title-font-weight: 700;
   --text-font-weight: 400;
   --main-color: #000;
@@ -19,3 +19,5 @@
     repeating-linear-gradient(#d3d3d3 0 2px, #d3d3d300 2px 4px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }
+
+
