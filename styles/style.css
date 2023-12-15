@@ -14,7 +14,7 @@
 }
 
 .header {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy);
   background-color: var(--background-color, #fff);
   border: 2px solid var(--main-color, #000);
   inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
@@ -48,7 +48,7 @@
 }
 
 .button {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
   background-color: var(--background-color, #fff);
   border: none;
@@ -130,12 +130,13 @@
   position: absolute;
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
   text-transform: uppercase;
-  text-shadow: 1px 1px var(--accent-color-label);
+  text-shadow: 1px 1px var(--accent-color-label, #fff);
   inset-block-start: 25px;
   inset-inline-end: 25px;
+  z-index: 1;
 }
 
 .card__image-hue-rotate {
@@ -171,12 +172,12 @@
 }
 
 @supports (
-  (text-stroke: 1px var(--accent-color-label)) or
-    (-webkit-text-stroke: 1px var(--accent-color-label))
+  (text-stroke: 1px var(--accent-color-label, #fff)) or
+    (-webkit-text-stroke: 1px var(--accent-color-label, #fff))
 ) {
   .card__image-label {
-    text-stroke: 1px var(--accent-color-label);
-    -webkit-text-stroke: 1px var(--accent-color-label);
+    text-stroke: 1px var(--accent-color-label, #fff);
+    -webkit-text-stroke: 1px var(--accent-color-label, #fff);
     text-shadow: none;
   }
 }
@@ -278,20 +279,6 @@
   mix-blend-mode: difference;
 }
 
-.dialog {
-  position: fixed;
-  inset: 0;
-  font-family: var(--accent-font);
-  inline-size: 340px;
-  padding: 30px;
-  gap: 30px;
-  text-transform: uppercase;
-  color: var(--main-color, #000);
-  background-color: var(--background-color, #fff);
-  border: 2px solid var(--main-color, #000);
-  transition: opacity 0.3s ease-in-out;
-}
-
 .dialog::backdrop {
   background-color: #000;
   opacity: 0.75;
@@ -299,6 +286,15 @@
 
 .dialog[open] {
   display: grid;
+  font-family: var(--accent-font, fantasy);
+  inline-size: 357px;
+  padding: 30px;
+  gap: 30px;
+  text-transform: uppercase;
+  color: var(--main-color, #000);
+  background-color: var(--background-color, #fff);
+  border: 2px solid var(--main-color, #000);
+  transition: opacity 0.3s ease-in-out;
 }
 
 .dialog:not([open]) {
@@ -336,6 +332,11 @@
     gap: 48px;
   }
 
+  .card__image-label {
+    inset-block-start: 20px;
+    inset-inline-end: 13px;
+  }
+
   .button__download {
     display: flex;
     flex-direction: column;
@@ -346,4 +347,14 @@
     inline-size: 28px;
     block-size: 28px;
   }
+
+  .dialog {
+    inline-size: 341px;
+  }
+
+  .dialog__svg {
+    inline-size: 39px;
+    block-size: 39px;
+  }
 }
+
